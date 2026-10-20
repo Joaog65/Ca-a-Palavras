@@ -4,6 +4,9 @@ Jogo de caça-palavras com palavras do ambiente escolar, feito para crianças, e
 professores. A grade é **gerada automaticamente**, a seleção funciona com **mouse e toque** e cada
 palavra encontrada é marcada com a **cor do marca-texto escolhida pelo jogador**.
 
+📄 **Requisitos de produto completos (escopo, personas, RF/RNF, regras de negócio, matriz de
+rastreabilidade e roadmap) em [`PRD.md`](PRD.md).**
+
 ![Caça-Palavras Escolar](screenshots/desktop.png)
 
 ---
