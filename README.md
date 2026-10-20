@@ -116,6 +116,46 @@ depois **não altera** as palavras já marcadas.
 
 ---
 
+## 🧪 Como testar
+
+### 1. Teste manual (no navegador)
+
+```bash
+npm install
+npm run dev        # abra http://localhost:5173
+```
+
+Checklist sugerido para validar no navegador:
+
+| # | O que fazer | O que esperar |
+| --- | --- | --- |
+| 1 | Arraste de uma letra até a outra, em linha reta | A palavra é marcada na cor escolhida e riscada na lista |
+| 2 | Arraste na diagonal, de baixo para cima e da direita para a esquerda | Funciona igual (8 direções) |
+| 3 | Arraste letras que não formam palavra | Aviso de erro, nada é marcado, a grade treme |
+| 4 | Troque a cor **com** palavras já encontradas | As antigas **mantêm** a cor original; a nova entra na cor escolhida |
+| 5 | Toque na primeira letra e depois na última (celular/tablet) | A palavra é encontrada |
+| 6 | "Dica" | Apenas **uma letra** pisca por ~3 s |
+| 7 | "Mostrar solução" | Palavras restantes em cinza tracejado + tela de parabéns |
+| 8 | "Reiniciar" | Marcações limpas, **mesma grade** |
+| 9 | "Novo jogo" | Outra grade e outra lista (pede confirmação se houver progresso) |
+| 10 | Troque a categoria/dificuldade | Nova partida correspondente (10×10, 12×12 ou 14×14) |
+| 11 | Redimensione a janela para 360 px e para 1920 px | Sem rolagem horizontal; a grade se adapta |
+| 12 | Recarregue a página (F5) | Cor, categoria e dificuldade mantidas |
+
+> Para testar o **toque** no computador, abra o DevTools (F12) → ícone de celular (📱) → ative
+> "Device mode" e escolha um celular.
+
+### 2. Testes automatizados
+
+```bash
+npm test          # 46 testes unitários da lógica (geração, seleção, acentos)
+npm run test:e2e  # 17 testes no Chrome real (mouse, toque, botões, layout)
+```
+
+Para acompanhar os testes unitários em tempo real: `npm run test:watch`.
+
+---
+
 ## 📁 Estrutura do projeto
 
 ```
